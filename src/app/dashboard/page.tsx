@@ -2,7 +2,7 @@
 
 "use client"; // ✅ ensures client-side hooks work
 
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { useState } from "react";
@@ -11,8 +11,8 @@ import Carousel from "@/components/Carousel";
 import CarouselRect from "@/components/CarouselRect";
 
 export default function DashboardPage() {
-  const searchParams = useSearchParams(); // ✅ client-side hook
-  const name = searchParams.get("name") || "Alex";
+  // const searchParams = useSearchParams(); // ✅ client-side hook
+  // const name = searchParams.get("name") || "Alex";
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -60,7 +60,8 @@ export default function DashboardPage() {
         {/* Text */}
         <div className="relative z-10 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-            Welcome Back, <span className="text-emerald-400">{name}</span>!
+            Welcome Back !
+            {/* <span className="text-emerald-400">{name}</span>! */}
           </h1>
           <p className="text-sm sm:text-base md:text-lg lg:text-2xl text-gray-200 mb-6 max-w-xl mx-auto">
             Ready to land your dream job? AI-powered career advancement awaits.
