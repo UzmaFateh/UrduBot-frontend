@@ -35,7 +35,3 @@ export default function ShowCard({ show }: ShowCardProps) {
   );
 }
 
-
-
-
-

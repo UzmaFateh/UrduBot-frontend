@@ -15,3 +15,6 @@ export const shows: Show[] = [
   { id: 11, title: "Money Heist", thumbnail: "/images/g5.jpg", rating: "8.5" },
 ];
 
+
+
+

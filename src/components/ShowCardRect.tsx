@@ -34,3 +34,5 @@ export default function ShowCardRect({ show }: ShowCardRectProps) {
     </div>
   );
 }
+
+

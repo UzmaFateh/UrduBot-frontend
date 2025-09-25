@@ -4,3 +4,4 @@ export interface Show {
   thumbnail: string;
   rating?: string;
 }
+
