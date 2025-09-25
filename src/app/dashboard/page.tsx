@@ -17,11 +17,11 @@ export default function DashboardPage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-950">
       {/* Navbar */}
-      <header className="w-full bg-white shadow-md px-4 md:px-6 py-4 flex items-center justify-between sticky top-0 z-50">
+      <header className="w-full bg-gray-950 text-cyan-600 shadow-md px-4 md:px-6 py-4 flex items-center justify-between sticky top-0 z-50">
         {/* Logo */}
-        <div className="text-2xl font-bold text-emerald-600 cursor-pointer">MyLogo</div>
+        <div className="text-2xl font-bold  cursor-pointer text-cyan-600">MyLogo</div>
 
         {/* Hamburger menu mobile */}
         <div className="md:hidden">
@@ -70,13 +70,13 @@ export default function DashboardPage() {
 
       {/* Small Cards Carousel */}
       <section className="px-4 md:px-6 mt-8 ">
-        <h2 className="text-lg md:text-2xl font-bold">Your Co-Pilot Status</h2>
+        <h2 className="text-lg md:text-2xl font-bold text-cyan-600">Your Co-Pilot Status</h2>
         <Carousel shows={shows} />
       </section>
 
       {/* Rectangular Cards Carousel */}
       <section className="px-4 md:px-6 mt-8">
-        <h2 className="text-lg md:text-2xl font-bold">Recently Viewed Jobs</h2>
+        <h2 className="text-lg md:text-2xl font-bold text-cyan-600">Recently Viewed Jobs</h2>
         <CarouselRect shows={shows} />
       </section>
     </div>

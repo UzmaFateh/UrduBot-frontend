@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-gray-800 text-gray-800 flex flex-col">
       {/* Navbar */}
       <nav className="flex justify-between items-center px-6 py-4 shadow-sm bg-white relative z-20">
         <h1 className="text-2xl font-bold ">MyWebsite</h1>
