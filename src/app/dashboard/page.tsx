@@ -1,5 +1,6 @@
 
-"use client";
+
+"use client"; // ✅ ensures client-side hooks work
 
 import { useSearchParams } from "next/navigation";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
@@ -10,7 +11,7 @@ import Carousel from "@/components/Carousel";
 import CarouselRect from "@/components/CarouselRect";
 
 export default function DashboardPage() {
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams(); // ✅ client-side hook
   const name = searchParams.get("name") || "Alex";
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -49,15 +50,15 @@ export default function DashboardPage() {
       </header>
 
       {/* Hero Section */}
-      {/* <section
-        className="relative w-full  h-auto flex flex-col justify-center items-center text-center bg-cover bg-center py-8 "
+      <section
+        className="relative w-full h-auto flex flex-col justify-center items-center text-center bg-cover bg-center py-8 sm:py-12 md:py-14 lg:py-16 rounded-xl overflow-hidden"
         style={{ backgroundImage: "url('/images/hero.jpg')" }}
-      > */}
+      >
         {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div> */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 rounded-xl"></div>
 
         {/* Text */}
-        {/* <div className="relative z-10 px-4">
+        <div className="relative z-10 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
             Welcome Back, <span className="text-emerald-400">{name}</span>!
           </h1>
@@ -65,41 +66,23 @@ export default function DashboardPage() {
             Ready to land your dream job? AI-powered career advancement awaits.
           </p>
         </div>
-      </section> */}
-
-      <section
-  className="relative w-full h-auto flex flex-col justify-center items-center text-center bg-cover bg-center py-8 sm:py-12 md:py-14 lg:py-16 rounded-xl overflow-hidden"
-  style={{ backgroundImage: "url('/images/hero.jpg')" }}
->
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 rounded-xl"></div>
-
-  {/* Text */}
-  <div className="relative z-10 px-4">
-    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-      Welcome Back, <span className="text-emerald-400">{name}</span>!
-    </h1>
-    <p className="text-sm sm:text-base md:text-lg lg:text-2xl text-gray-200 mb-6 max-w-xl mx-auto">
-      Ready to land your dream job? AI-powered career advancement awaits.
-    </p>
-  </div>
-</section>
-
+      </section>
 
       {/* Small Cards Carousel */}
-      <section className="px-4 md:px-6 mt-8">
-        <h2 className="text-lg md:text-2xl font-bold ">Your Co-Pilot Status</h2>
-        <Carousel shows={shows} /> {/* Horizontal carousel for all screen sizes */}
+      <section className="px-4 md:px-6 mt-8 ">
+        <h2 className="text-lg md:text-2xl font-bold">Your Co-Pilot Status</h2>
+        <Carousel shows={shows} />
       </section>
 
       {/* Rectangular Cards Carousel */}
       <section className="px-4 md:px-6 mt-8">
-        <h2 className="text-lg md:text-2xl font-bold ">Recently Viewed Jobs</h2>
-        <CarouselRect shows={shows} /> {/* Horizontal carousel for all screen sizes */}
+        <h2 className="text-lg md:text-2xl font-bold">Recently Viewed Jobs</h2>
+        <CarouselRect shows={shows} />
       </section>
     </div>
   );
 }
+
 
 
 

@@ -1,3 +1,6 @@
+
+"use client"; // ✅ ensures client-side interactions work (onClick etc.)
+
 import React from "react";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -14,3 +17,4 @@ export const Button: React.FC<ButtonProps> = ({ children, className = "", ...pro
     </button>
   );
 };
+
